@@ -4,13 +4,12 @@
 
 #app {
 	font-family: 'Roboto', sans-serif;
-	padding: 16px;
 }
 
 .list-item-container {
+	box-shadow: 2px 2px 5px -2px rgb(144, 144, 144);
 	background-color: #3c4353;
 	max-width: 580px;
-	width: 100%;
 	max-height: 120px;
 	display: flex;
 	justify-content: space-between;
@@ -23,7 +22,6 @@
 }
 
 .list-item-thumb {
-	/* background-color: yellow; */
 	overflow: hidden;
 	flex: 3;
 	min-width: 100px;
@@ -36,9 +34,14 @@
 }
 
 #list-item-video {
-	object-fit: cover;
 	height: 100%;
 	width: 100%;
+}
+
+#list-item-video > video {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
 }
 
 .list-item-number {
@@ -53,28 +56,38 @@
 }
 
 .list-item-text {
-	/* background-color: yellow; */
+	align-self: center;
 	flex: 8;
-	font-size: smaller;
 	border-left: 1px solid #596077;
 	padding-left: 16px;
-	/* overflow: hidden; */
-	/* white-space: nowrap; */
-	/* text-overflow: ellipsis; */
 }
 
 .list-item-header {
+	font-size: 16px;
 	font-weight: 500;
 	color: #ef9d39;
 }
 
 .list-item-url {
+	font-size: 16px;
 	color: #7e828e;
 }
 
 @media (max-width: 650px) {
+	.list-item-container {
+		padding: 6px;
+	}
+
 	.list-item-text {
+		padding-left: 8px;
+	}
+
+	.list-item-header {
 		font-size: 13px;
+	}
+
+	.list-item-url {
+		font-size: 12px;
 	}
 
 	.list-item-number {
